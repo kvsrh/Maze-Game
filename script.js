@@ -573,8 +573,18 @@ function rand(max) {
       player.unbindKeyDown();
       player = null;
     }
-    var e = document.getElementById("diffSelect");
-    difficulty = e.options[e.selectedIndex].value;
+    // var e = document.getElementById("diffSelect");
+    // difficulty = e.options[e.selectedIndex].value;
+
+    // Allow only one level of difficulty
+
+    // Possible values:
+    // <option value="10">Easy</option>
+    // <option value="15">Medium</option>
+    // <option value="25">Hard</option>
+    // <option value="38">Extreme</option>   
+    difficulty = 15;
+
     cellSize = mazeCanvas.width / difficulty;
     maze = new Maze(difficulty, difficulty);
     draw = new DrawMaze(maze, ctx, cellSize, finishSprite);
