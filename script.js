@@ -345,7 +345,7 @@ function rand(max) {
   
     function drawSpriteCircle(coord) {
       ctx.beginPath();
-      ctx.fillStyle = "yellow";
+      ctx.fillStyle = "black";
       ctx.arc(
         (coord.x + 1) * cellSize - halfCellSize,
         (coord.y + 1) * cellSize - halfCellSize,
