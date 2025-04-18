@@ -113,8 +113,8 @@ input:focus, select:focus {
 }
 
 #page #menu {
-    margin: 0;
-    padding: 5px;
+    margin: 0 0 0 0;
+    padding: 3px 0 0 0;
     height: auto;
     box-sizing: border-box;
 }
@@ -150,26 +150,28 @@ input:focus, select:focus {
 /* Mobile Styles */
 @media only screen and (max-width: 767px) {
     #page #menu {
-        padding: 0px;
+        padding: 0;
         height: auto;
-        margin-bottom: 0;
+        margin: 0 0 0 0;
         flex-shrink: 0;
     }
     
     #view {
-        margin-top: 0;
+        margin: 0;
+        padding: 0;
     }
     
     #mazeCanvas {
         border-width: 2px;
         max-height: calc(100vh - 80px);
+        margin-top: 0;
     }
     
     input, select {
-        height: 30px;
+        height: 28px;
         width: 120px;
         font-size: 13px;
-        padding: 5px;
+        padding: 3px;
         margin: 0;
     }
     
