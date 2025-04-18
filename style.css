@@ -10,7 +10,7 @@ html, body {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #fff;
+    background-color: #E6E9F0;  /* Muted matte blue-gray */
     font-family: 'Poppins', sans-serif;
     overflow: hidden;
 }
@@ -52,16 +52,17 @@ html, body {
 #mazeCanvas {
     display: block;
     margin: 0;
-    border: solid 2px black;
+    border: solid 2px #2F3542;  /* Darker shade for better contrast */
     height: auto;
     width: auto;
     max-height: calc(100vh - 130px);
     max-width: 95vw;
+    background-color: #F8F9FB;  /* Lighter shade for maze background */
 }
 
 input, select {
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.30);
+    background-color: #2F3542;  /* Darker matte color for buttons */
     height: 40px;
     width: 140px;
     padding: 8px;
@@ -76,11 +77,11 @@ input, select {
 }
 
 input:hover, select:hover {
-    background-color: rgba(0, 0, 0, 0.70);
+    background-color: #3C4250;  /* Slightly lighter on hover */
 }
 
 input:active, select:active {
-    background-color: black;
+    background-color: #1E2532;  /* Darker when clicked */
 }
 
 input:focus, select:focus {
@@ -127,7 +128,7 @@ input:focus, select:focus {
 }
 
 .border {
-    border: 5px black solid;
+    border: 5px #2F3542 solid;  /* Matching border color */
     border-radius: 10px;
 }
 
