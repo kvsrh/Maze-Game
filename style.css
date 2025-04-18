@@ -23,6 +23,7 @@ html, body {
     padding: 0;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 #view {
@@ -44,7 +45,7 @@ html, body {
     border-radius: 10px;
     position: relative;
     z-index: 0;
-    max-height: 90vh;
+    max-height: calc(100vh - 120px);
     max-width: 95vw;
 }
 
@@ -54,7 +55,7 @@ html, body {
     border: solid 2px black;
     height: auto;
     width: auto;
-    max-height: 80vh;
+    max-height: calc(100vh - 130px);
     max-width: 95vw;
 }
 
@@ -132,75 +133,105 @@ input:focus, select:focus {
 
 #instructions {
     text-align: center;
-    font-size: 1.1em;
-    margin: 5px 0;
-    padding: 0 10px;
+    font-size: 1em;
+    margin: 5px auto;
+    padding: 0 2px;
+    max-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    bottom: 0;
+    overflow: visible;
+    line-height: 1.2;
+    height: auto;
+    white-space: normal;
+    word-wrap: break-word;
 }
 
 /* Mobile Styles */
 @media only screen and (max-width: 767px) {
-    #page {
-        height: 100%;
-        justify-content: space-between;
-    }
-    
     #page #menu {
-        padding: 3px;
+        padding: 0px;
         height: auto;
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+    
+    #view {
+        margin-top: 0;
     }
     
     #mazeCanvas {
-        border-width: 3px;
-        max-height: 70vh;
-    }
-    
-    input, select {
-        height: 36px;
-        width: 120px;
-        font-size: 13px;
-        padding: 5px;
-    }
-    
-    #instructions {
-        font-size: 0.9em;
-        margin: 3px 0;
-    }
-    
-    .border {
-        border-width: 3px;
-    }
-}
-
-@media only screen and (max-height: 600px) {
-    #mazeCanvas {
-        max-height: 65vh;
-    }
-    
-    #instructions {
-        font-size: 0.8em;
-        margin: 2px 0;
-    }
-    
-    #page #menu {
-        padding: 2px;
+        border-width: 2px;
+        max-height: calc(100vh - 80px);
     }
     
     input, select {
         height: 30px;
-        width: 100px;
-        font-size: 12px;
-        padding: 3px;
-    }
-}
-
-@media only screen and (max-height: 400px) {
-    #mazeCanvas {
-        max-height: 60vh;
+        width: 120px;
+        font-size: 13px;
+        padding: 5px;
+        margin: 0;
     }
     
     #instructions {
-        font-size: 0.7em;
+        width: 100%;
+        font-size: 0.65em;
+        margin: 2px auto;
+        padding: 0;
+        line-height: 1.1;
+        flex-shrink: 0;
+        display: block;
+    }
+    
+    .border {
+        border-width: 2px;
+    }
+}
+
+/* Extra small mobile screens */
+@media only screen and (max-width: 360px), only screen and (max-height: 600px) {
+    #mazeCanvas {
+        max-height: calc(100vh - 70px);
+    }
+    
+    #instructions {
+        font-size: 0.6em;
         margin: 1px 0;
+        line-height: 1;
+        flex-shrink: 0;
+    }
+    
+    #page #menu {
+        padding: 0px;
+        margin-bottom: 0;
+    }
+    
+    input, select {
+        height: 25px;
+        width: 100px;
+        font-size: 12px;
+        padding: 2px;
+        margin: 0;
+    }
+}
+
+/* Very small screens (iPhone 5/SE size) */
+@media only screen and (max-width: 320px), only screen and (max-height: 500px) {
+    #mazeCanvas {
+        max-height: calc(100vh - 60px);
+    }
+    
+    #instructions {
+        font-size: 0.55em;
+        line-height: 1;
+        margin: 0;
+    }
+    
+    input, select {
+        height: 22px;
+        width: 90px;
+        font-size: 11px;
+        padding: 1px;
     }
 }
 
