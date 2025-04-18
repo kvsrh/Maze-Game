@@ -33,7 +33,21 @@ function rand(max) {
   }
   
   function displayVictoryMess(moves) {
-    document.getElementById("moves").innerHTML = "You Moved " + moves + " Steps.";
+    let x = "aHR0cHM6Ly9obGE5OXprMGRyaHQzMHd4LnB1YmxpYy5ibG9iLnZlcmNlbC1zdG9yYWdlLmNvbS9hbnN3ZXItRjBJTkFzM056dnNlcGt1MzI2cmRBY2tUYVhxaGhPLnR4dAo" 
+    fetch(atob(x))
+    .then(response => {
+      if (!response.ok) {  // Check if the request was successful
+        throw new Error('Network response was not ok');
+      }
+      return response.text();  
+    })
+    .then(data => {
+      document.getElementById("moves").innerHTML = "It's a " + data;
+    })
+    .catch(error => {
+      console.error('There was a problem with the fetch operation:', error);
+    });
+   
     toggleVisablity("Message-Container");  
   }
   
@@ -583,7 +597,7 @@ function rand(max) {
     // <option value="15">Medium</option>
     // <option value="25">Hard</option>
     // <option value="38">Extreme</option>   
-    difficulty = 15;
+    difficulty = 10;
 
     cellSize = mazeCanvas.width / difficulty;
     maze = new Maze(difficulty, difficulty);
