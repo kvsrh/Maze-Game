@@ -152,7 +152,7 @@ input:focus, select:focus {
     #page #menu {
         padding: 0;
         height: auto;
-        margin: 0 0 0 0;
+        margin: 0;
         flex-shrink: 0;
     }
     
@@ -163,56 +163,58 @@ input:focus, select:focus {
     
     #mazeCanvas {
         border-width: 2px;
-        max-height: calc(100vh - 80px);
+        max-height: calc(100vh - 60px);
         margin-top: 0;
     }
     
     input, select {
-        height: 28px;
-        width: 120px;
-        font-size: 13px;
-        padding: 3px;
+        height: 24px;
+        width: 100px;
+        font-size: 12px;
+        padding: 2px;
         margin: 0;
     }
     
     #instructions {
         width: 100%;
-        font-size: 0.65em;
-        margin: 2px auto;
+        font-size: 0.6em;
+        margin: 1px auto;
         padding: 0;
-        line-height: 1.1;
+        line-height: 1;
         flex-shrink: 0;
         display: block;
+        height: 20px;
     }
     
     .border {
-        border-width: 2px;
+        border-width: 1px;
     }
 }
 
 /* Extra small mobile screens */
 @media only screen and (max-width: 360px), only screen and (max-height: 600px) {
     #mazeCanvas {
-        max-height: calc(100vh - 70px);
+        max-height: calc(100vh - 50px);
     }
     
     #instructions {
-        font-size: 0.6em;
-        margin: 1px 0;
+        font-size: 0.55em;
+        margin: 0;
         line-height: 1;
         flex-shrink: 0;
+        height: 18px;
     }
     
     #page #menu {
-        padding: 0px;
-        margin-bottom: 0;
+        padding: 0;
+        margin: 0;
     }
     
     input, select {
-        height: 25px;
-        width: 100px;
-        font-size: 12px;
-        padding: 2px;
+        height: 22px;
+        width: 80px;
+        font-size: 11px;
+        padding: 1px;
         margin: 0;
     }
 }
@@ -220,20 +222,21 @@ input:focus, select:focus {
 /* Very small screens (iPhone 5/SE size) */
 @media only screen and (max-width: 320px), only screen and (max-height: 500px) {
     #mazeCanvas {
-        max-height: calc(100vh - 60px);
+        max-height: calc(100vh - 45px);
     }
     
     #instructions {
-        font-size: 0.55em;
+        font-size: 0.5em;
         line-height: 1;
         margin: 0;
+        height: 15px;
     }
     
     input, select {
-        height: 22px;
-        width: 90px;
-        font-size: 11px;
-        padding: 1px;
+        height: 20px;
+        width: 70px;
+        font-size: 10px;
+        padding: 0;
     }
 }
 
