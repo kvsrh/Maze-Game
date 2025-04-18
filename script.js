@@ -597,7 +597,7 @@ function rand(max) {
     // <option value="15">Medium</option>
     // <option value="25">Hard</option>
     // <option value="38">Extreme</option>   
-    difficulty = 10;
+    difficulty = 20;
 
     cellSize = mazeCanvas.width / difficulty;
     maze = new Maze(difficulty, difficulty);
