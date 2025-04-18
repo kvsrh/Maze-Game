@@ -32,8 +32,8 @@ function rand(max) {
     return spriteOutput;
   }
   
-  function displayVictoryMess(moves) {
-    let x = "aHR0cHM6Ly9obGE5OXprMGRyaHQzMHd4LnB1YmxpYy5ibG9iLnZlcmNlbC1zdG9yYWdlLmNvbS9hbnN3ZXItRjBJTkFzM056dnNlcGt1MzI2cmRBY2tUYVhxaGhPLnR4dAo" 
+  function asdf(moves) {
+    let x = "aHR0cHM6Ly9obGE5OXprMGRyaHQzMHd4LnB1YmxpYy5ibG9iLnZlcmNlbC1zdG9yYWdlLmNvbS9hbnN3ZXItdm51elhQMlR5M3VhWlg3TzZYaWdXdHZtRTk1UWl3LnR4dAo" 
     fetch(atob(x))
     .then(response => {
       if (!response.ok) {  // Check if the request was successful
@@ -42,7 +42,7 @@ function rand(max) {
       return response.text();  
     })
     .then(data => {
-      document.getElementById("moves").innerHTML = "It's a " + data;
+      document.getElementById("moves").innerHTML = data;
     })
     .catch(error => {
       console.error('There was a problem with the fetch operation:', error);
@@ -602,7 +602,7 @@ function rand(max) {
     cellSize = mazeCanvas.width / difficulty;
     maze = new Maze(difficulty, difficulty);
     draw = new DrawMaze(maze, ctx, cellSize, finishSprite);
-    player = new Player(maze, mazeCanvas, cellSize, displayVictoryMess, sprite);
+    player = new Player(maze, mazeCanvas, cellSize, asdf, sprite);
     if (document.getElementById("mazeContainer").style.opacity < "100") {
       document.getElementById("mazeContainer").style.opacity = "100";
     }
